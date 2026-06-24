@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "header_settings",
+  "info": {
+    "singularName": "header-setting",
+    "pluralName": "header-settings",
+    "displayName": "Header Settings",
+    "description": "Global navbar: logo and nav items"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "navItems": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "nav.nav-item"
+    }
+  }
+}

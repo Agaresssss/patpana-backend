@@ -1,0 +1,52 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_settings",
+  "info": {
+    "singularName": "footer-setting",
+    "pluralName": "footer-settings",
+    "displayName": "Footer Settings",
+    "description": "Global footer: logo, company info, social links, legal links"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "tel": {
+      "type": "string",
+      "required": false
+    },
+    "fax": {
+      "type": "string",
+      "required": false
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.social-link"
+    },
+    "copyrightText": {
+      "type": "string",
+      "required": true
+    },
+    "legalLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.legal-link"
+    }
+  }
+}
