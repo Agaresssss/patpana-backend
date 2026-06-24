@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_home_hero_slides",
+  "info": {
+    "displayName": "Hero Slide",
+    "icon": "layout",
+    "description": "Parallax hero slide with tagline and background image"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string",
+      "required": true
+    },
+    "taglineColor": {
+      "type": "enumeration",
+      "enum": ["white", "orange"],
+      "required": true
+    },
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    }
+  }
+}

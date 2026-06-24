@@ -1,0 +1,124 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": "Content for the homepage"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "shared.seo"
+    },
+    "heroSlides": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "home.hero-slide"
+    },
+    "introTagline": {
+      "type": "string",
+      "required": true
+    },
+    "introCompanyName": {
+      "type": "string",
+      "required": true
+    },
+    "introSubtitle": {
+      "type": "string",
+      "required": true
+    },
+    "introBody": {
+      "type": "text",
+      "required": true
+    },
+    "introCtaLabel": {
+      "type": "string",
+      "required": true
+    },
+    "introCtaUrl": {
+      "type": "string",
+      "required": true
+    },
+    "introImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "businessSectionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "sectors": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "home.sector-card"
+    },
+    "bannerTitle": {
+      "type": "string",
+      "required": true
+    },
+    "bannerBody": {
+      "type": "text",
+      "required": true
+    },
+    "bannerCtaLabel": {
+      "type": "string",
+      "required": true
+    },
+    "bannerCtaUrl": {
+      "type": "string",
+      "required": true
+    },
+    "bannerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "sustainTitle": {
+      "type": "string",
+      "required": true
+    },
+    "pillars": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "home.pillar"
+    },
+    "newsSectionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "newsCtaLabel": {
+      "type": "string",
+      "required": true
+    },
+    "newsCtaUrl": {
+      "type": "string",
+      "required": true
+    },
+    "articleSectionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "articleCtaLabel": {
+      "type": "string",
+      "required": true
+    },
+    "articleCtaUrl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
