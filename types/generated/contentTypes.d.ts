@@ -1,58 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface ApiFooterSettingFooterSetting extends Struct.SingleTypeSchema {
-  collectionName: 'footer_settings';
-  info: {
-    singularName: 'footer-setting';
-    pluralName: 'footer-settings';
-    displayName: 'Footer Settings';
-    description: 'Global footer: logo, company info, social links, legal links';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    companyName: Schema.Attribute.String & Schema.Attribute.Required;
-    address: Schema.Attribute.Text & Schema.Attribute.Required;
-    tel: Schema.Attribute.String;
-    fax: Schema.Attribute.String;
-    socialLinks: Schema.Attribute.Component<'footer.social-link', true>;
-    copyrightText: Schema.Attribute.String & Schema.Attribute.Required;
-    legalLinks: Schema.Attribute.Component<'footer.legal-link', true>;
-    createdAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiHeaderSettingHeaderSetting extends Struct.SingleTypeSchema {
-  collectionName: 'header_settings';
-  info: {
-    singularName: 'header-setting';
-    pluralName: 'header-settings';
-    displayName: 'Header Settings';
-    description: 'Global navbar: logo and nav items';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    navItems: Schema.Attribute.Component<'nav.nav-item', true> &
-      Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface AdminApiToken extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_api_tokens';
   info: {
@@ -996,8 +943,6 @@ export interface PluginUsersPermissionsUser
 declare module '@strapi/strapi' {
   export module Public {
     export interface ContentTypeSchemas {
-      'api::footer-setting.footer-setting': ApiFooterSettingFooterSetting;
-      'api::header-setting.header-setting': ApiHeaderSettingHeaderSetting;
       'admin::api-token': AdminApiToken;
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::permission': AdminPermission;
