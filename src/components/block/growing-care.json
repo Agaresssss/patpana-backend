@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_block_growing_cares",
+  "info": {
+    "displayName": "Growing Care",
+    "icon": "seed",
+    "description": "GROWING CARE culture section"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": ["white", "cream", "orange"]
+    },
+    "introImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "enTitle": {
+      "type": "string"
+    },
+    "thTitle": {
+      "type": "string"
+    },
+    "bodyMd": {
+      "type": "richtext"
+    },
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.value-item"
+    },
+    "quoteImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "quoteText": {
+      "type": "string"
+    },
+    "quoteDescription": {
+      "type": "text"
+    },
+    "quoteAuthor": {
+      "type": "string"
+    }
+  }
+}

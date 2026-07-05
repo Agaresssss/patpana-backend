@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_block_video_embeds",
+  "info": {
+    "displayName": "Video Embed",
+    "icon": "play",
+    "description": "Embedded video from a trusted URL"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": ["white", "cream", "orange"]
+    },
+    "videoUrl": {
+      "type": "string"
+    }
+  }
+}

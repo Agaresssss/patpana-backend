@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "join_us_pages",
+  "info": {
+    "singularName": "join-us-page",
+    "pluralName": "join-us-pages",
+    "displayName": "Join Us Page",
+    "description": "ร่วมงานกับเรา"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "block.hero-banner",
+        "block.growing-care",
+        "block.life-wellness",
+        "block.job-board"
+      ]
+    }
+  }
+}

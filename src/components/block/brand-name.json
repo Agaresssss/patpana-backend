@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_block_brand_names",
+  "info": {
+    "displayName": "Brand Name",
+    "icon": "typhoon",
+    "description": "Meaning-of-our-name section with shuffled images"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": ["white", "cream", "orange"]
+    },
+    "sectionTitle": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.brand-image"
+    }
+  }
+}

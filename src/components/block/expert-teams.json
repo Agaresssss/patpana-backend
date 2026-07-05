@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_block_expert_teams",
+  "info": {
+    "displayName": "Expert Teams",
+    "icon": "user",
+    "description": "Contact cards for expert teams"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": ["white", "cream", "orange"]
+    },
+    "sectionTitle": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "teams": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.expert-team"
+    }
+  }
+}

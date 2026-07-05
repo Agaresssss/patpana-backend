@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "cookie_pages",
+  "info": {
+    "singularName": "cookie-page",
+    "pluralName": "cookie-pages",
+    "displayName": "Cookie Page",
+    "description": "นโยบายคุกกี้"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "block.hero-banner",
+        "block.rich-text"
+      ]
+    }
+  }
+}

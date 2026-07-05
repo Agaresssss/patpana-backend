@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_block_tagline_banners",
+  "info": {
+    "displayName": "Tagline Banner",
+    "icon": "quote",
+    "description": "Image banner with a quote and subtitle"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

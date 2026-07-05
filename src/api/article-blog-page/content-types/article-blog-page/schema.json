@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "article_blog_pages",
+  "info": {
+    "singularName": "article-blog-page",
+    "pluralName": "article-blog-pages",
+    "displayName": "Article Blog Page",
+    "description": "List shell for คลังข้อมูลและบทความ"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "gridCtaLabel": {
+      "type": "string"
+    }
+  }
+}

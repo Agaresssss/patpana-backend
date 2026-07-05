@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_brand_images",
+  "info": {
+    "displayName": "Brand Image",
+    "icon": "picture",
+    "description": "Image + shuffle flag inside block.brand-name"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "shuffle": {
+      "type": "enumeration",
+      "enum": ["up", "down"]
+    }
+  }
+}

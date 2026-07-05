@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "article_news_pages",
+  "info": {
+    "singularName": "article-news-page",
+    "pluralName": "article-news-pages",
+    "displayName": "Article News Page",
+    "description": "List shell for ข่าวประชาสัมพันธ์"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "gridCtaLabel": {
+      "type": "string"
+    }
+  }
+}

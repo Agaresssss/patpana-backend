@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_block_timelines",
+  "info": {
+    "displayName": "Timeline",
+    "icon": "clock",
+    "description": "Company history timeline"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": ["white", "cream", "orange"]
+    },
+    "sectionTitle": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.timeline-item"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_hero_slides",
+  "info": {
+    "displayName": "Hero Slide",
+    "icon": "picture",
+    "description": "Slide inside block.hero-carousel"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "videos"]
+    },
+    "captionMd": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_testimonials",
+  "info": {
+    "displayName": "Testimonial",
+    "icon": "quote",
+    "description": "Employee / customer testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "quote": {
+      "type": "richtext"
+    },
+    "author": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_contact_lines",
+  "info": {
+    "displayName": "Contact Line",
+    "icon": "phone",
+    "description": "A labelled contact value { label, value }"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

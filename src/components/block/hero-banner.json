@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_block_hero_banners",
+  "info": {
+    "displayName": "Hero Banner",
+    "icon": "picture",
+    "description": "Page banner, first block on most pages"
+  },
+  "options": {},
+  "attributes": {
+    "layout": {
+      "type": "enumeration",
+      "enum": ["image", "center", "orange"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "watermark": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

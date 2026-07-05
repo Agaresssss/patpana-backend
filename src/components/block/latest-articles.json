@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_block_latest_articles",
+  "info": {
+    "displayName": "Latest Articles",
+    "icon": "book",
+    "description": "Heading + CTA; latest blog articles injected by the loader"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cta"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    }
+  }
+}

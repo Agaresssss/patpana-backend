@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_jobs",
+  "info": {
+    "displayName": "Job",
+    "icon": "briefcase",
+    "description": "Job opening inside block.job-board"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "employmentType": {
+      "type": "enumeration",
+      "enum": ["full_time", "full_part_time"]
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_block_job_boards",
+  "info": {
+    "displayName": "Job Board",
+    "icon": "briefcase",
+    "description": "Careers listing section"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": ["white", "cream", "orange"]
+    },
+    "sectionTitle": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "jobs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.job"
+    }
+  }
+}

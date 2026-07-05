@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_block_foods",
+  "info": {
+    "displayName": "Food",
+    "icon": "restaurant",
+    "description": "FOOD business section"
+  },
+  "options": {},
+  "attributes": {
+    "bannerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.info-card"
+    },
+    "contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.department-contact"
+    }
+  }
+}

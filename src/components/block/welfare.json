@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_block_welfares",
+  "info": {
+    "displayName": "Welfare",
+    "icon": "heart",
+    "description": "People / society / environment welfare section"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": ["white", "cream", "orange"]
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.welfare-image"
+    },
+    "body": {
+      "type": "text"
+    },
+    "testimonialTitle": {
+      "type": "string"
+    },
+    "testimonial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.testimonial"
+    }
+  }
+}

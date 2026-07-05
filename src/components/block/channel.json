@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_block_channels",
+  "info": {
+    "displayName": "Channel",
+    "icon": "shoppingCart",
+    "description": "Distribution channels section"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": ["white", "cream", "orange"]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

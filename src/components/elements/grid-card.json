@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_elements_grid_cards",
+  "info": {
+    "displayName": "Grid Card",
+    "icon": "grid",
+    "description": "Card inside block.card-grid"
+  },
+  "options": {},
+  "attributes": {
+    "variant": {
+      "type": "enumeration",
+      "enum": ["stat", "text"]
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "bodyMd": {
+      "type": "richtext"
+    },
+    "descriptionMd": {
+      "type": "richtext"
+    },
+    "imageBottom": {
+      "type": "boolean"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer",
+    "description": "Site footer: company info, social and legal links"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "tel": {
+      "type": "string"
+    },
+    "fax": {
+      "type": "string"
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.social-link"
+    },
+    "copyrightText": {
+      "type": "string"
+    },
+    "legalLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.legal-link"
+    }
+  }
+}

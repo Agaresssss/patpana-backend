@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_block_founders",
+  "info": {
+    "displayName": "Founder",
+    "icon": "user",
+    "description": "Founder introduction section"
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": ["white", "cream", "orange"]
+    },
+    "label": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "signerName": {
+      "type": "string"
+    },
+    "signerTitle": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

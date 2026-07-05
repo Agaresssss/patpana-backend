@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_block_latest_news",
+  "info": {
+    "displayName": "Latest News",
+    "icon": "bell",
+    "description": "Heading + CTA; latest news article injected by the loader"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cta"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::article.article"
+    }
+  }
+}
