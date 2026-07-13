@@ -7,44 +7,24 @@
   },
   "options": {},
   "attributes": {
-    "bg": {
-      "type": "enumeration",
-      "enum": ["white", "cream", "orange"]
-    },
     "introImage": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "enTitle": {
-      "type": "string"
-    },
-    "thTitle": {
+    "title": {
       "type": "string"
     },
     "bodyMd": {
       "type": "richtext"
     },
-    "values": {
+    "design": {
       "type": "component",
-      "repeatable": true,
-      "component": "elements.value-item"
-    },
-    "quoteImages": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": ["images"]
-    },
-    "quoteText": {
-      "type": "string"
-    },
-    "quoteDescription": {
-      "type": "text"
-    },
-    "quoteAuthor": {
-      "type": "string"
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

@@ -13,11 +13,20 @@
     "subtitle": {
       "type": "text"
     },
-    "bgImage": {
+    "logo": {
       "type": "media",
       "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

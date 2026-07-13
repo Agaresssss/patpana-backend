@@ -22,7 +22,9 @@
       "components": [
         "block.hero-banner",
         "block.growing-care",
-        "block.life-wellness",
+        "block.reason-join",
+        "block.job-intro",
+        "block.testimonial",
         "block.job-board"
       ]
     }

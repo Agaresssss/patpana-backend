@@ -7,10 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "bg": {
-      "type": "enumeration",
-      "enum": ["white", "cream", "orange"]
-    },
     "label": {
       "type": "string"
     },
@@ -33,7 +29,14 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

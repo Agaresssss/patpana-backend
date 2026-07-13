@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_food_texts",
+  "info": {
+    "displayName": "Food Text",
+    "icon": "file",
+    "description": "Title + body text block inside block.food"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bodyMd": {
+      "type": "richtext"
+    }
+  }
+}

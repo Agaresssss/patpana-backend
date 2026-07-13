@@ -11,11 +11,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
-    },
-    "shuffle": {
-      "type": "enumeration",
-      "enum": ["up", "down"]
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

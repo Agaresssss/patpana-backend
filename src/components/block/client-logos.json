@@ -7,17 +7,18 @@
   },
   "options": {},
   "attributes": {
-    "bg": {
-      "type": "enumeration",
-      "enum": ["white", "cream", "orange"]
-    },
     "sectionTitle": {
       "type": "string"
     },
     "clients": {
       "type": "component",
-      "repeatable": true,
-      "component": "elements.client-logo"
+      "component": "elements.client-logo",
+      "repeatable": true
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

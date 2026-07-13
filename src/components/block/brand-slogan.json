@@ -10,11 +10,10 @@
     "slogan": {
       "type": "string"
     },
-    "bgImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

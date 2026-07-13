@@ -15,7 +15,7 @@
     },
     "employmentType": {
       "type": "enumeration",
-      "enum": ["full_time", "full_part_time"]
+      "enum": ["full_time", "part_time", "full_part_time"]
     },
     "description": {
       "type": "text"

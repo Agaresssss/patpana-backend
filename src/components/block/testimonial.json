@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_block_testimonials",
+  "info": {
+    "displayName": "Testimonial",
+    "icon": "quote",
+    "description": "Employee testimonial section with portrait and quote"
+  },
+  "options": {},
+  "attributes": {
+    "testimonialTitle": {
+      "type": "string"
+    },
+    "testimonial": {
+      "type": "component",
+      "component": "shared.testimonial",
+      "repeatable": false
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

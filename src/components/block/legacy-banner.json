@@ -7,17 +7,17 @@
   },
   "options": {},
   "attributes": {
-    "bgImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
-    },
     "title": {
       "type": "string"
     },
-    "body": {
-      "type": "text"
+    "bodyMd": {
+      "type": "richtext",
+      "required": false
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

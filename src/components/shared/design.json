@@ -9,25 +9,40 @@
   "attributes": {
     "background": {
       "type": "enumeration",
-      "enum": ["white", "cream", "orange", "navy", "image"]
+      "enum": [
+        "white",
+        "cream",
+        "orange",
+        "navy",
+        "image"
+      ]
     },
     "backgroundImage": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "align": {
       "type": "enumeration",
-      "enum": ["left", "center", "right"]
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
     },
-    "spacing": {
+    "size": {
       "type": "enumeration",
-      "enum": ["none", "tight", "normal", "loose"]
-    },
-    "width": {
-      "type": "enumeration",
-      "enum": ["narrow", "default", "wide", "full"]
+      "default": "sm",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl"
+      ]
     }
   }
 }

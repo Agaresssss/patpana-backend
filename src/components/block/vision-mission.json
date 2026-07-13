@@ -7,20 +7,18 @@
   },
   "options": {},
   "attributes": {
-    "bg": {
-      "type": "enumeration",
-      "enum": ["white", "cream", "orange"]
-    },
     "visionIcon": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "visionThTitle": {
+    "visionTitle": {
       "type": "string"
     },
-    "visionEnSubtitle": {
+    "visionSubtitle": {
       "type": "string"
     },
     "visionBody": {
@@ -30,12 +28,14 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "missionThTitle": {
+    "missionTitle": {
       "type": "string"
     },
-    "missionEnSubtitle": {
+    "missionSubtitle": {
       "type": "string"
     },
     "missionBody": {
@@ -45,15 +45,22 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "quotes": {
-      "type": "text"
+    "quotesMd": {
+      "type": "richtext"
     },
     "coreValues": {
       "type": "component",
-      "repeatable": true,
-      "component": "elements.core-value"
+      "component": "elements.core-value",
+      "repeatable": true
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

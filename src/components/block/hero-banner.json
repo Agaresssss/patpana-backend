@@ -7,24 +7,14 @@
   },
   "options": {},
   "attributes": {
-    "layout": {
-      "type": "enumeration",
-      "enum": ["image", "center", "orange"]
-    },
     "title": {
       "type": "string"
     },
-    "bgImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
-    },
-    "watermark": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false,
+      "required": true
     }
   }
 }

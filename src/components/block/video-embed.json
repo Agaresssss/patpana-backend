@@ -7,12 +7,13 @@
   },
   "options": {},
   "attributes": {
-    "bg": {
-      "type": "enumeration",
-      "enum": ["white", "cream", "orange"]
-    },
     "videoUrl": {
       "type": "string"
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

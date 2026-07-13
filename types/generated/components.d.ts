@@ -8,8 +8,8 @@ export interface BlockBrandName extends Struct.ComponentSchema {
     icon: 'typhoon';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
     body: Schema.Attribute.Text;
+    design: Schema.Attribute.Component<'shared.design', false>;
     images: Schema.Attribute.Component<'elements.brand-image', true>;
     sectionTitle: Schema.Attribute.String;
     subtitle: Schema.Attribute.String;
@@ -24,7 +24,7 @@ export interface BlockBrandSlogan extends Struct.ComponentSchema {
     icon: 'quote';
   };
   attributes: {
-    bgImage: Schema.Attribute.Media<'images'>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     slogan: Schema.Attribute.String;
   };
 }
@@ -68,8 +68,8 @@ export interface BlockClientLogos extends Struct.ComponentSchema {
     icon: 'picture';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
     clients: Schema.Attribute.Component<'elements.client-logo', true>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     sectionTitle: Schema.Attribute.String;
   };
 }
@@ -82,7 +82,7 @@ export interface BlockContactForm extends Struct.ComponentSchema {
     icon: 'envelop';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     mapUrl: Schema.Attribute.Text;
     sectionTitle: Schema.Attribute.String;
   };
@@ -96,7 +96,7 @@ export interface BlockExpertTeams extends Struct.ComponentSchema {
     icon: 'user';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     sectionTitle: Schema.Attribute.String;
     subtitle: Schema.Attribute.Text;
     teams: Schema.Attribute.Component<'elements.expert-team', true>;
@@ -111,10 +111,19 @@ export interface BlockFarm extends Struct.ComponentSchema {
     icon: 'house';
   };
   attributes: {
-    bannerImage: Schema.Attribute.Media<'images'>;
     cards: Schema.Attribute.Component<'elements.info-card', true>;
+    cardsTitle: Schema.Attribute.String;
     contact: Schema.Attribute.Component<'shared.department-contact', false>;
     description: Schema.Attribute.Text;
+    design: Schema.Attribute.Component<'shared.design', false>;
+    items: Schema.Attribute.Component<'elements.farm-item', true>;
+    steps: Schema.Attribute.Component<'elements.farm-step', true>;
+    stepsBgImage: Schema.Attribute.Media<'images'>;
+    stepsDesc: Schema.Attribute.Text;
+    stepsTitle: Schema.Attribute.String;
+    sustainDescMd: Schema.Attribute.RichText;
+    sustainImages: Schema.Attribute.Media<'images', true>;
+    sustainTitle: Schema.Attribute.String;
     tagline: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -142,13 +151,13 @@ export interface BlockFeed extends Struct.ComponentSchema {
     icon: 'seed';
   };
   attributes: {
-    bannerImage: Schema.Attribute.Media<'images'>;
     certBody: Schema.Attribute.Text;
     certLogos: Schema.Attribute.Media<'images', true>;
     checklist: Schema.Attribute.Component<'elements.check-item', true>;
     checklistImage: Schema.Attribute.Media<'images'>;
     contact: Schema.Attribute.Component<'shared.department-contact', false>;
     description: Schema.Attribute.Text;
+    design: Schema.Attribute.Component<'shared.design', false>;
     highlights: Schema.Attribute.Component<'elements.feed-highlight', true>;
     tagline: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -163,11 +172,14 @@ export interface BlockFood extends Struct.ComponentSchema {
     icon: 'restaurant';
   };
   attributes: {
-    bannerImage: Schema.Attribute.Media<'images'>;
-    cards: Schema.Attribute.Component<'elements.info-card', true>;
     contact: Schema.Attribute.Component<'shared.department-contact', false>;
     description: Schema.Attribute.Text;
+    design: Schema.Attribute.Component<'shared.design', false>;
+    imageAccent: Schema.Attribute.Media<'images'>;
+    imageLarge: Schema.Attribute.Media<'images'>;
+    imageSmall: Schema.Attribute.Media<'images'>;
     tagline: Schema.Attribute.String;
+    text: Schema.Attribute.Component<'elements.food-text', false>;
     title: Schema.Attribute.String;
   };
 }
@@ -180,8 +192,8 @@ export interface BlockFounder extends Struct.ComponentSchema {
     icon: 'user';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
     bio: Schema.Attribute.Text;
+    design: Schema.Attribute.Component<'shared.design', false>;
     image: Schema.Attribute.Media<'images'>;
     label: Schema.Attribute.String;
     name: Schema.Attribute.String;
@@ -214,16 +226,10 @@ export interface BlockGrowingCare extends Struct.ComponentSchema {
     icon: 'seed';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
     bodyMd: Schema.Attribute.RichText;
-    enTitle: Schema.Attribute.String;
+    design: Schema.Attribute.Component<'shared.design', false>;
     introImage: Schema.Attribute.Media<'images'>;
-    quoteAuthor: Schema.Attribute.String;
-    quoteDescription: Schema.Attribute.Text;
-    quoteImages: Schema.Attribute.Media<'images', true>;
-    quoteText: Schema.Attribute.String;
-    thTitle: Schema.Attribute.String;
-    values: Schema.Attribute.Component<'elements.value-item', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -235,10 +241,9 @@ export interface BlockHeroBanner extends Struct.ComponentSchema {
     icon: 'picture';
   };
   attributes: {
-    bgImage: Schema.Attribute.Media<'images'>;
-    layout: Schema.Attribute.Enumeration<['image', 'center', 'orange']>;
+    design: Schema.Attribute.Component<'shared.design', false> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String;
-    watermark: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -280,11 +285,27 @@ export interface BlockJobBoard extends Struct.ComponentSchema {
     icon: 'briefcase';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     jobs: Schema.Attribute.Component<'elements.job', true>;
     sectionTitle: Schema.Attribute.String;
     subtitle: Schema.Attribute.Text;
     tagline: Schema.Attribute.String;
+  };
+}
+
+export interface BlockJobIntro extends Struct.ComponentSchema {
+  collectionName: 'components_block_job_intros';
+  info: {
+    description: 'Job registration intro with image gallery slider';
+    displayName: 'Job Intro';
+    icon: 'picture';
+  };
+  attributes: {
+    descriptionMd: Schema.Attribute.RichText;
+    design: Schema.Attribute.Component<'shared.design', false>;
+    galleryTitle: Schema.Attribute.String;
+    slides: Schema.Attribute.Media<'images', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -298,6 +319,7 @@ export interface BlockLatestArticles extends Struct.ComponentSchema {
   attributes: {
     articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
     cta: Schema.Attribute.Component<'shared.cta', false>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     heading: Schema.Attribute.String;
   };
 }
@@ -310,8 +332,9 @@ export interface BlockLatestNews extends Struct.ComponentSchema {
     icon: 'bell';
   };
   attributes: {
-    article: Schema.Attribute.Relation<'manyToOne', 'api::article.article'>;
+    article: Schema.Attribute.Relation<'oneToOne', 'api::article.article'>;
     cta: Schema.Attribute.Component<'shared.cta', false>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     heading: Schema.Attribute.String;
   };
 }
@@ -324,8 +347,8 @@ export interface BlockLegacyBanner extends Struct.ComponentSchema {
     icon: 'picture';
   };
   attributes: {
-    bgImage: Schema.Attribute.Media<'images'>;
-    body: Schema.Attribute.Text;
+    bodyMd: Schema.Attribute.RichText;
+    design: Schema.Attribute.Component<'shared.design', false>;
     title: Schema.Attribute.String;
   };
 }
@@ -344,6 +367,20 @@ export interface BlockLifeWellness extends Struct.ComponentSchema {
     testimonial: Schema.Attribute.Component<'shared.testimonial', false>;
     testimonialTitle: Schema.Attribute.String;
     thTitle: Schema.Attribute.String;
+  };
+}
+
+export interface BlockReasonJoin extends Struct.ComponentSchema {
+  collectionName: 'components_block_reason_joins';
+  info: {
+    description: 'Full-width background banner with title and description';
+    displayName: 'Reason Join';
+    icon: 'star';
+  };
+  attributes: {
+    descriptionMd: Schema.Attribute.RichText;
+    design: Schema.Attribute.Component<'shared.design', false>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -368,8 +405,8 @@ export interface BlockServiceCards extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
     cards: Schema.Attribute.Component<'elements.service-card', true>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     sectionTitle: Schema.Attribute.String;
   };
 }
@@ -382,9 +419,24 @@ export interface BlockTaglineBanner extends Struct.ComponentSchema {
     icon: 'quote';
   };
   attributes: {
-    bgImage: Schema.Attribute.Media<'images'>;
+    design: Schema.Attribute.Component<'shared.design', false>;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     quote: Schema.Attribute.String;
     subtitle: Schema.Attribute.Text;
+  };
+}
+
+export interface BlockTestimonial extends Struct.ComponentSchema {
+  collectionName: 'components_block_testimonials';
+  info: {
+    description: 'Employee testimonial section with portrait and quote';
+    displayName: 'Testimonial';
+    icon: 'quote';
+  };
+  attributes: {
+    design: Schema.Attribute.Component<'shared.design', false>;
+    testimonial: Schema.Attribute.Component<'shared.testimonial', false>;
+    testimonialTitle: Schema.Attribute.String;
   };
 }
 
@@ -396,7 +448,7 @@ export interface BlockTimeline extends Struct.ComponentSchema {
     icon: 'clock';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     items: Schema.Attribute.Component<'elements.timeline-item', true>;
     sectionTitle: Schema.Attribute.String;
   };
@@ -410,7 +462,7 @@ export interface BlockVideoEmbed extends Struct.ComponentSchema {
     icon: 'play';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     videoUrl: Schema.Attribute.String;
   };
 }
@@ -423,18 +475,18 @@ export interface BlockVisionMission extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
     coreValues: Schema.Attribute.Component<'elements.core-value', true>;
+    design: Schema.Attribute.Component<'shared.design', false>;
     missionBody: Schema.Attribute.Text;
-    missionEnSubtitle: Schema.Attribute.String;
     missionIcon: Schema.Attribute.Media<'images'>;
-    missionThTitle: Schema.Attribute.String;
-    quotes: Schema.Attribute.Text;
+    missionSubtitle: Schema.Attribute.String;
+    missionTitle: Schema.Attribute.String;
     quotesImage: Schema.Attribute.Media<'images'>;
+    quotesMd: Schema.Attribute.RichText;
     visionBody: Schema.Attribute.Text;
-    visionEnSubtitle: Schema.Attribute.String;
     visionIcon: Schema.Attribute.Media<'images'>;
-    visionThTitle: Schema.Attribute.String;
+    visionSubtitle: Schema.Attribute.String;
+    visionTitle: Schema.Attribute.String;
   };
 }
 
@@ -446,8 +498,8 @@ export interface BlockWelfare extends Struct.ComponentSchema {
     icon: 'heart';
   };
   attributes: {
-    bg: Schema.Attribute.Enumeration<['white', 'cream', 'orange']>;
     body: Schema.Attribute.Text;
+    design: Schema.Attribute.Component<'shared.design', false>;
     images: Schema.Attribute.Component<'elements.welfare-image', true>;
     testimonial: Schema.Attribute.Component<'shared.testimonial', false>;
     testimonialTitle: Schema.Attribute.String;
@@ -463,7 +515,6 @@ export interface ElementsBrandImage extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images'>;
-    shuffle: Schema.Attribute.Enumeration<['up', 'down']>;
   };
 }
 
@@ -520,6 +571,35 @@ export interface ElementsExpertTeam extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsFarmItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_farm_items';
+  info: {
+    description: 'Shuffle card inside block.farm';
+    displayName: 'Farm Item';
+    icon: 'house';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    layout: Schema.Attribute.Enumeration<['left', 'right']>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsFarmStep extends Struct.ComponentSchema {
+  collectionName: 'components_elements_farm_steps';
+  info: {
+    description: 'Numbered step card inside block.farm';
+    displayName: 'Farm Step';
+    icon: 'bulletList';
+  };
+  attributes: {
+    body: Schema.Attribute.Text;
+    num: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsFeatureItem extends Struct.ComponentSchema {
   collectionName: 'components_elements_feature_items';
   info: {
@@ -543,6 +623,19 @@ export interface ElementsFeedHighlight extends Struct.ComponentSchema {
   attributes: {
     body: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsFoodText extends Struct.ComponentSchema {
+  collectionName: 'components_elements_food_texts';
+  info: {
+    description: 'Title + body text block inside block.food';
+    displayName: 'Food Text';
+    icon: 'file';
+  };
+  attributes: {
+    bodyMd: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
   };
 }
@@ -604,7 +697,7 @@ export interface ElementsJob extends Struct.ComponentSchema {
     department: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     employmentType: Schema.Attribute.Enumeration<
-      ['full_time', 'full_part_time']
+      ['full_time', 'part_time', 'full_part_time']
     >;
     title: Schema.Attribute.String;
   };
@@ -759,6 +852,7 @@ export interface SharedDepartmentContact extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.RichText;
+    brochureUrl: Schema.Attribute.String;
     ctaLabel: Schema.Attribute.String;
     department: Schema.Attribute.String;
   };
@@ -777,8 +871,8 @@ export interface SharedDesign extends Struct.ComponentSchema {
       ['white', 'cream', 'orange', 'navy', 'image']
     >;
     backgroundImage: Schema.Attribute.Media<'images'>;
-    spacing: Schema.Attribute.Enumeration<['none', 'tight', 'normal', 'loose']>;
-    width: Schema.Attribute.Enumeration<['narrow', 'default', 'wide', 'full']>;
+    size: Schema.Attribute.Enumeration<['sm', 'md', 'lg', 'xl', 'xxl']> &
+      Schema.Attribute.DefaultTo<'sm'>;
   };
 }
 
@@ -844,13 +938,16 @@ declare module '@strapi/strapi' {
       'block.hero-carousel': BlockHeroCarousel;
       'block.intro': BlockIntro;
       'block.job-board': BlockJobBoard;
+      'block.job-intro': BlockJobIntro;
       'block.latest-articles': BlockLatestArticles;
       'block.latest-news': BlockLatestNews;
       'block.legacy-banner': BlockLegacyBanner;
       'block.life-wellness': BlockLifeWellness;
+      'block.reason-join': BlockReasonJoin;
       'block.rich-text': BlockRichText;
       'block.service-cards': BlockServiceCards;
       'block.tagline-banner': BlockTaglineBanner;
+      'block.testimonial': BlockTestimonial;
       'block.timeline': BlockTimeline;
       'block.video-embed': BlockVideoEmbed;
       'block.vision-mission': BlockVisionMission;
@@ -860,8 +957,11 @@ declare module '@strapi/strapi' {
       'elements.client-logo': ElementsClientLogo;
       'elements.core-value': ElementsCoreValue;
       'elements.expert-team': ElementsExpertTeam;
+      'elements.farm-item': ElementsFarmItem;
+      'elements.farm-step': ElementsFarmStep;
       'elements.feature-item': ElementsFeatureItem;
       'elements.feed-highlight': ElementsFeedHighlight;
+      'elements.food-text': ElementsFoodText;
       'elements.grid-card': ElementsGridCard;
       'elements.hero-slide': ElementsHeroSlide;
       'elements.info-card': ElementsInfoCard;

@@ -27,8 +27,7 @@
         "block.service-cards",
         "block.feed",
         "block.farm",
-        "block.food",
-        "block.channel"
+        "block.food"
       ]
     }
   }

@@ -14,14 +14,17 @@
   "attributes": {
     "seo": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
-    },
-    "heroTitle": {
-      "type": "string"
+      "component": "shared.seo",
+      "repeatable": false
     },
     "gridCtaLabel": {
       "type": "string"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "block.hero-banner"
+      ]
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_block_reason_joins",
+  "info": {
+    "displayName": "Reason Join",
+    "icon": "star",
+    "description": "Full-width background banner with title and description"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "descriptionMd": {
+      "type": "richtext"
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

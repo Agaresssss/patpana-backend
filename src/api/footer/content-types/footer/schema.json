@@ -16,7 +16,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "companyName": {
       "type": "string"
@@ -32,16 +34,23 @@
     },
     "socialLinks": {
       "type": "component",
-      "repeatable": true,
-      "component": "footer.social-link"
+      "component": "footer.social-link",
+      "repeatable": true
     },
     "copyrightText": {
       "type": "string"
     },
     "legalLinks": {
       "type": "component",
-      "repeatable": true,
-      "component": "footer.legal-link"
+      "component": "footer.legal-link",
+      "repeatable": true
+    },
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

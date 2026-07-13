@@ -7,10 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "bg": {
-      "type": "enumeration",
-      "enum": ["white", "cream", "orange"]
-    },
     "sectionTitle": {
       "type": "string"
     },
@@ -19,8 +15,13 @@
     },
     "teams": {
       "type": "component",
-      "repeatable": true,
-      "component": "elements.expert-team"
+      "component": "elements.expert-team",
+      "repeatable": true
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

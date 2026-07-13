@@ -15,6 +15,9 @@
     },
     "ctaLabel": {
       "type": "string"
+    },
+    "brochureUrl": {
+      "type": "string"
     }
   }
 }

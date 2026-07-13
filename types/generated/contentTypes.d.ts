@@ -505,7 +505,6 @@ export interface ApiAboutProductPageAboutProductPage
         'block.feed',
         'block.farm',
         'block.food',
-        'block.channel',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -538,11 +537,11 @@ export interface ApiArticleBlogPageArticleBlogPage
     draftAndPublish: false;
   };
   attributes: {
+    blocks: Schema.Attribute.DynamicZone<['block.hero-banner']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     gridCtaLabel: Schema.Attribute.String;
-    heroTitle: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -570,10 +569,10 @@ export interface ApiArticleNewsPageArticleNewsPage
     draftAndPublish: false;
   };
   attributes: {
+    blocks: Schema.Attribute.DynamicZone<['block.hero-banner']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    gridCtaLabel: Schema.Attribute.String;
     heroTitle: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -737,6 +736,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   };
   attributes: {
     address: Schema.Attribute.Text;
+    bgImage: Schema.Attribute.Media<'images'>;
     companyName: Schema.Attribute.String;
     copyrightText: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
@@ -847,7 +847,9 @@ export interface ApiJoinUsPageJoinUsPage extends Struct.SingleTypeSchema {
       [
         'block.hero-banner',
         'block.growing-care',
-        'block.life-wellness',
+        'block.reason-join',
+        'block.job-intro',
+        'block.testimonial',
         'block.job-board',
       ]
     >;

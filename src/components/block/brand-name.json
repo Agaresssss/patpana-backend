@@ -7,10 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "bg": {
-      "type": "enumeration",
-      "enum": ["white", "cream", "orange"]
-    },
     "sectionTitle": {
       "type": "string"
     },
@@ -22,8 +18,13 @@
     },
     "images": {
       "type": "component",
-      "repeatable": true,
-      "component": "elements.brand-image"
+      "component": "elements.brand-image",
+      "repeatable": true
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
     }
   }
 }

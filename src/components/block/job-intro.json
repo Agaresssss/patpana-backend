@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_block_job_intros",
+  "info": {
+    "displayName": "Job Intro",
+    "icon": "picture",
+    "description": "Job registration intro with image gallery slider"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "descriptionMd": {
+      "type": "richtext"
+    },
+    "galleryTitle": {
+      "type": "string"
+    },
+    "slides": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}
