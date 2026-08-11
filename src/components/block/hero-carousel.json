@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_block_hero_carousels",
+  "info": {
+    "displayName": "Hero Carousel",
+    "icon": "slideshow",
+    "description": "Full-bleed rotating hero"
+  },
+  "options": {},
+  "attributes": {
+    "design": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.design"
+    },
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.hero-slide"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_block_job_boards",
+  "info": {
+    "displayName": "Job Board",
+    "icon": "briefcase",
+    "description": "Careers listing section"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "jobs": {
+      "type": "component",
+      "component": "elements.job",
+      "repeatable": true
+    },
+    "formTitle": {
+      "type": "string"
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

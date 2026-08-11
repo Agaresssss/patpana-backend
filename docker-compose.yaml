@@ -1,0 +1,34 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:17
+    # ports:
+      # - "5432:5432"
+    env_file:
+      - ./database.env
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  backend:
+    container_name : backend
+    image: registry.nipa.cloud/patpana-registry/patpana-backend-node-23:0.1.2
+    depends_on:
+      - postgres
+    env_file:
+      - ./backend.env
+    volumes:
+      - ./strapi-media:/opt/app/public/uploads
+    ports:
+      - "127.0.0.1:1337:1337"
+
+  frontend:
+    container_name : frontend
+    depends_on:
+      - backend
+    image: registry.nipa.cloud/patpana-registry/patpana-frontend:0.1.2
+    environment:
+      - STRAPI_URL=http://backend:1337
+      # - STRAPI_TOKEN=""
+      # - PUBLIC_STRAPI_URL=https://www.patpana.com
+    ports:
+      - "127.0.0.1:4321:4321"

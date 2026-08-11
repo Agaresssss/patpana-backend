@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_block_service_cards",
+  "info": {
+    "displayName": "Service Cards",
+    "icon": "apps",
+    "description": "Grid of service cards with anchors"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "elements.service-card",
+      "repeatable": true
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_block_brand_slogans",
+  "info": {
+    "displayName": "Brand Slogan",
+    "icon": "quote",
+    "description": "Full-bleed slogan banner"
+  },
+  "options": {},
+  "attributes": {
+    "slogan": {
+      "type": "string"
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

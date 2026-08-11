@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_block_legacy_banners",
+  "info": {
+    "displayName": "Legacy Banner",
+    "icon": "picture",
+    "description": "Full-bleed legacy statement banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bodyMd": {
+      "type": "richtext",
+      "required": false
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

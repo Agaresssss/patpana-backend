@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_block_foods",
+  "info": {
+    "displayName": "Food",
+    "icon": "restaurant",
+    "description": "FOOD business section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "descriptionMd": {
+      "type": "richtext"
+    },
+    "imageSmall": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "text": {
+      "type": "component",
+      "component": "elements.food-text",
+      "repeatable": false
+    },
+    "imageLarge": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "imageAccent": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "contact": {
+      "type": "component",
+      "component": "shared.department-contact",
+      "repeatable": false
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

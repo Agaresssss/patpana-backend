@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_elements_timeline_items",
+  "info": {
+    "displayName": "Timeline Item",
+    "icon": "clock",
+    "description": "Entry inside block.timeline"
+  },
+  "options": {},
+  "attributes": {
+    "side": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ]
+    },
+    "year": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "descriptionMd": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

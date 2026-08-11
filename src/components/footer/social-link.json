@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footer_social_links",
+  "info": {
+    "displayName": "Social Link",
+    "icon": "earth",
+    "description": "Footer social media link"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": ["facebook", "line", "x"]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

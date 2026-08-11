@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_footer_legal_links",
+  "info": {
+    "displayName": "Legal Link",
+    "icon": "file",
+    "description": "Footer legal / policy link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_expert_teams",
+  "info": {
+    "displayName": "Expert Team",
+    "icon": "user",
+    "description": "Team inside block.expert-teams"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "contacts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.contact-line"
+    },
+    "brochure": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files"]
+    }
+  }
+}

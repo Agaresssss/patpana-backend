@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_block_rich_texts",
+  "info": {
+    "displayName": "Rich Text",
+    "icon": "file",
+    "description": "Standalone markdown content block"
+  },
+  "options": {},
+  "attributes": {
+    "design": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.design"
+    },
+    "contentMd": {
+      "type": "richtext"
+    }
+  }
+}

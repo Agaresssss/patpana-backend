@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_block_video_embeds",
+  "info": {
+    "displayName": "Video Embed",
+    "icon": "play",
+    "description": "Embedded video from a trusted URL"
+  },
+  "options": {},
+  "attributes": {
+    "videoTitle": {
+      "type": "string"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

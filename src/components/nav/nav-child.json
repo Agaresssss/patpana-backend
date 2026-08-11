@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_nav_nav_children",
+  "info": {
+    "displayName": "Nav Child",
+    "icon": "bulletList",
+    "description": "Dropdown child link under a nav item"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

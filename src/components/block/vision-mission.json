@@ -1,0 +1,66 @@
+{
+  "collectionName": "components_block_vision_missions",
+  "info": {
+    "displayName": "Vision Mission",
+    "icon": "bulletList",
+    "description": "Vision, mission, quotes and core values"
+  },
+  "options": {},
+  "attributes": {
+    "visionIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "visionTitle": {
+      "type": "string"
+    },
+    "visionSubtitle": {
+      "type": "string"
+    },
+    "visionBodyMd": {
+      "type": "richtext"
+    },
+    "missionIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "missionTitle": {
+      "type": "string"
+    },
+    "missionSubtitle": {
+      "type": "string"
+    },
+    "missionBodyMd": {
+      "type": "richtext"
+    },
+    "quotesImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "quotesMd": {
+      "type": "richtext"
+    },
+    "coreValues": {
+      "type": "component",
+      "component": "elements.core-value",
+      "repeatable": true
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

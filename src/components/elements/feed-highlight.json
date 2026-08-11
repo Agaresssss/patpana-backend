@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_feed_highlights",
+  "info": {
+    "displayName": "Feed Highlight",
+    "icon": "landscape",
+    "description": "Highlight inside block.feed"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
