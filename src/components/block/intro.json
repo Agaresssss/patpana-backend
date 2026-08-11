@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_block_intros",
+  "info": {
+    "displayName": "Intro",
+    "icon": "quote",
+    "description": "Intro section with gallery and CTAs"
+  },
+  "options": {},
+  "attributes": {
+    "design": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.design"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "bodyMd": {
+      "type": "richtext"
+    },
+    "ctas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cta"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

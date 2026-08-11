@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_shared_designs",
+  "info": {
+    "displayName": "Design",
+    "icon": "brush",
+    "description": "Presentation options shared by newer blocks"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "cream",
+        "orange",
+        "navy",
+        "image",
+        "sand"
+      ]
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "align": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    },
+    "size": {
+      "type": "enumeration",
+      "default": "sm",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl"
+      ]
+    }
+  }
+}

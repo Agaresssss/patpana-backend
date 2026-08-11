@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_core_values",
+  "info": {
+    "displayName": "Core Value",
+    "icon": "star",
+    "description": "Icon + label inside block.vision-mission"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

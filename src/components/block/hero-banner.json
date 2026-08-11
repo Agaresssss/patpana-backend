@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_block_hero_banners",
+  "info": {
+    "displayName": "Hero Banner",
+    "icon": "picture",
+    "description": "Page banner, first block on most pages"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}

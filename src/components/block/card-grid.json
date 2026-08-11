@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_block_card_grids",
+  "info": {
+    "displayName": "Card Grid",
+    "icon": "grid",
+    "description": "Grid of showcase / stat / text cards"
+  },
+  "options": {},
+  "attributes": {
+    "cardVariant": {
+      "type": "enumeration",
+      "enum": ["showcase", "feature", "media-card", "stat"]
+    },
+    "design": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.design"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.grid-card"
+    }
+  }
+}

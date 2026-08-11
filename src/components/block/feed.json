@@ -1,0 +1,65 @@
+{
+  "collectionName": "components_block_feeds",
+  "info": {
+    "displayName": "Feed",
+    "icon": "seed",
+    "description": "FEED business section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "descriptionMd": {
+      "type": "richtext"
+    },
+    "detailsTitle": {
+      "type": "string"
+    },
+    "highlights": {
+      "type": "component",
+      "component": "elements.feed-highlight",
+      "repeatable": true
+    },
+    "checklistImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "standardsTitle": {
+      "type": "string"
+    },
+    "checklist": {
+      "type": "component",
+      "component": "elements.check-item",
+      "repeatable": true
+    },
+    "certBody": {
+      "type": "text"
+    },
+    "certLogos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "contact": {
+      "type": "component",
+      "component": "shared.department-contact",
+      "repeatable": false
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

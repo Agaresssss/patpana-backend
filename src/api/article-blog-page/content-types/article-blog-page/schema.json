@@ -1,0 +1,49 @@
+{
+  "kind": "singleType",
+  "collectionName": "article_blog_pages",
+  "info": {
+    "singularName": "article-blog-page",
+    "pluralName": "article-blog-pages",
+    "displayName": "Article Blog Page",
+    "description": "List shell for คลังข้อมูลและบทความ"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "gridCtaLabel": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "block.hero-banner"
+      ]
+    }
+  }
+}

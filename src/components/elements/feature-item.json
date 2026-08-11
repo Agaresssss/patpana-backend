@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_feature_items",
+  "info": {
+    "displayName": "Feature Item",
+    "icon": "bulletList",
+    "description": "Item inside block.feature-list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bodyMd": {
+      "type": "richtext"
+    }
+  }
+}

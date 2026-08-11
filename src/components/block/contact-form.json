@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_block_contact_forms",
+  "info": {
+    "displayName": "Contact Form",
+    "icon": "envelop",
+    "description": "Contact section with a trusted map embed"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "mapTitle": {
+      "type": "string"
+    },
+    "mapUrl": {
+      "type": "text"
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

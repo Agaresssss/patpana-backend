@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_block_feature_lists",
+  "info": {
+    "displayName": "Feature List",
+    "icon": "bulletList",
+    "description": "Heading with a list of feature items"
+  },
+  "options": {},
+  "attributes": {
+    "design": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.design"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-item"
+    }
+  }
+}

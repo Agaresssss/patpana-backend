@@ -1,0 +1,76 @@
+{
+  "collectionName": "components_block_farms",
+  "info": {
+    "displayName": "Farm",
+    "icon": "house",
+    "description": "FARM business section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "descriptionMd": {
+      "type": "richtext"
+    },
+    "items": {
+      "type": "component",
+      "component": "elements.farm-item",
+      "repeatable": true
+    },
+    "cardsTitle": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "elements.info-card",
+      "repeatable": true
+    },
+    "stepsBgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "stepsTitle": {
+      "type": "string"
+    },
+    "stepsDescriptionMd": {
+      "type": "richtext"
+    },
+    "steps": {
+      "type": "component",
+      "component": "elements.farm-step",
+      "repeatable": true
+    },
+    "sustainImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sustainTitle": {
+      "type": "string"
+    },
+    "sustainDescMd": {
+      "type": "richtext"
+    },
+    "contact": {
+      "type": "component",
+      "component": "shared.department-contact",
+      "repeatable": false
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

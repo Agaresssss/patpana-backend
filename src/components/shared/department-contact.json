@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_department_contacts",
+  "info": {
+    "displayName": "Department Contact",
+    "icon": "envelop",
+    "description": "Contact block used by feed/farm/food blocks"
+  },
+  "options": {},
+  "attributes": {
+    "department": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "brochure": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

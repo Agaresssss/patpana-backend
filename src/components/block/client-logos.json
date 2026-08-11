@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_block_client_logos",
+  "info": {
+    "displayName": "Client Logos",
+    "icon": "picture",
+    "description": "Grid of client logos"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "clients": {
+      "type": "component",
+      "component": "elements.client-logo",
+      "repeatable": true
+    },
+    "design": {
+      "type": "component",
+      "component": "shared.design",
+      "repeatable": false
+    }
+  }
+}

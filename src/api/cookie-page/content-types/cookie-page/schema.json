@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "cookie_pages",
+  "info": {
+    "singularName": "cookie-page",
+    "pluralName": "cookie-pages",
+    "displayName": "Cookie Page",
+    "description": "นโยบายคุกกี้"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "block.hero-banner",
+        "block.rich-text"
+      ]
+    }
+  }
+}

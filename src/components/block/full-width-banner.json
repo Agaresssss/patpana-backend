@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_block_full_width_banners",
+  "info": {
+    "displayName": "Full Width Banner",
+    "icon": "picture",
+    "description": "Full-bleed banner with optional background image"
+  },
+  "options": {},
+  "attributes": {
+    "design": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.design"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "bodyMd": {
+      "type": "richtext"
+    },
+    "ctas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.cta"
+    }
+  }
+}
