@@ -16,8 +16,8 @@
     "tagline": {
       "type": "string"
     },
-    "bio": {
-      "type": "text"
+    "bioMd": {
+      "type": "richtext"
     },
     "signerName": {
       "type": "string"

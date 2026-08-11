@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "join_us_form_submissions",
+  "info": {
+    "singularName": "join-us-form-submission",
+    "pluralName": "join-us-form-submissions",
+    "displayName": "Join Us Form Submission",
+    "description": "Submissions from the Join Us page form"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "private": true,
+      "minLength": 1,
+      "maxLength": 255,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "tel": {
+      "type": "string",
+      "private": true,
+      "minLength": 1,
+      "maxLength": 20,
+      "required": false
+    },
+    "position": {
+      "type": "string",
+      "private": true,
+      "minLength": 1,
+      "maxLength": 255,
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "private": true,
+      "minLength": 1,
+      "required": true
+    }
+  }
+}

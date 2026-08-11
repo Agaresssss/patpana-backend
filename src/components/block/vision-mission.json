@@ -21,8 +21,8 @@
     "visionSubtitle": {
       "type": "string"
     },
-    "visionBody": {
-      "type": "text"
+    "visionBodyMd": {
+      "type": "richtext"
     },
     "missionIcon": {
       "type": "media",
@@ -38,8 +38,8 @@
     "missionSubtitle": {
       "type": "string"
     },
-    "missionBody": {
-      "type": "text"
+    "missionBodyMd": {
+      "type": "richtext"
     },
     "quotesImage": {
       "type": "media",

@@ -9,7 +9,10 @@
   "attributes": {
     "side": {
       "type": "enumeration",
-      "enum": ["left", "right"]
+      "enum": [
+        "left",
+        "right"
+      ]
     },
     "year": {
       "type": "string"
@@ -17,14 +20,16 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "descriptionMd": {
+      "type": "richtext"
     },
     "image": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

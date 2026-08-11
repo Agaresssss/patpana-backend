@@ -13,12 +13,14 @@
     "department": {
       "type": "string"
     },
-    "employmentType": {
-      "type": "enumeration",
-      "enum": ["full_time", "part_time", "full_part_time"]
+    "employmentTypeLabel": {
+      "type": "string"
     },
-    "description": {
-      "type": "text"
+    "descriptionMd": {
+      "type": "richtext"
+    },
+    "ctaLabel": {
+      "type": "string"
     }
   }
 }

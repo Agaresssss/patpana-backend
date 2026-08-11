@@ -10,6 +10,9 @@
     "sectionTitle": {
       "type": "string"
     },
+    "mapTitle": {
+      "type": "string"
+    },
     "mapUrl": {
       "type": "text"
     },

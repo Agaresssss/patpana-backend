@@ -7,6 +7,9 @@
   },
   "options": {},
   "attributes": {
+    "videoTitle": {
+      "type": "string"
+    },
     "videoUrl": {
       "type": "string"
     },

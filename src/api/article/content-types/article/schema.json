@@ -70,6 +70,16 @@
       "relation": "manyToMany",
       "target": "api::tag.tag"
     },
+    "relatedArticlesTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "เนื้อหาที่คล้ายกัน",
+      "required": true
+    },
     "relatedArticles": {
       "type": "relation",
       "relation": "manyToMany",

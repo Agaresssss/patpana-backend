@@ -28,6 +28,13 @@
       "type": "component",
       "component": "shared.design",
       "repeatable": false
+    },
+    "introImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

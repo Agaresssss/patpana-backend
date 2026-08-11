@@ -13,8 +13,8 @@
     "title": {
       "type": "string"
     },
-    "body": {
-      "type": "text"
+    "bodyMd": {
+      "type": "richtext"
     }
   }
 }

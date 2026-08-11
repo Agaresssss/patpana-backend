@@ -13,8 +13,8 @@
     "subtitle": {
       "type": "string"
     },
-    "body": {
-      "type": "text"
+    "bodyMd": {
+      "type": "richtext"
     },
     "images": {
       "type": "component",

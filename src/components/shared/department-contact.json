@@ -16,8 +16,13 @@
     "ctaLabel": {
       "type": "string"
     },
-    "brochureUrl": {
-      "type": "string"
+    "brochure": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

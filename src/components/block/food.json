@@ -13,8 +13,8 @@
     "tagline": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "descriptionMd": {
+      "type": "richtext"
     },
     "imageSmall": {
       "type": "media",

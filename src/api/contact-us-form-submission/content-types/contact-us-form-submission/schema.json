@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_us_form_submissions",
+  "info": {
+    "singularName": "contact-us-form-submission",
+    "pluralName": "contact-us-form-submissions",
+    "displayName": "Contact Us Form Submission",
+    "description": "Submissions from the Contact Us page form"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "private": true,
+      "minLength": 1,
+      "maxLength": 255,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "private": true,
+      "required": true
+    },
+    "tel": {
+      "type": "string",
+      "private": true,
+      "minLength": 1,
+      "maxLength": 15,
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "private": true,
+      "minLength": 1,
+      "required": true
+    }
+  }
+}

@@ -61,6 +61,14 @@
         }
       }
     },
+    "contactLabel": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "socialLinks": {
       "type": "component",
       "pluginOptions": {

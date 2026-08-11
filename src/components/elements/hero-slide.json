@@ -13,8 +13,18 @@
       "required": false,
       "allowedTypes": ["images", "videos"]
     },
-    "captionMd": {
-      "type": "richtext"
+    "caption": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "cream",
+        "orange",
+        "navy",
+        "black"
+      ]
     }
   }
 }

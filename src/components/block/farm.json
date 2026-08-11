@@ -13,8 +13,8 @@
     "tagline": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "descriptionMd": {
+      "type": "richtext"
     },
     "items": {
       "type": "component",
@@ -40,8 +40,8 @@
     "stepsTitle": {
       "type": "string"
     },
-    "stepsDesc": {
-      "type": "text"
+    "stepsDescriptionMd": {
+      "type": "richtext"
     },
     "steps": {
       "type": "component",

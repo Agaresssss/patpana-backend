@@ -21,6 +21,9 @@
       "component": "elements.job",
       "repeatable": true
     },
+    "formTitle": {
+      "type": "string"
+    },
     "design": {
       "type": "component",
       "component": "shared.design",

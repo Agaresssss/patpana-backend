@@ -13,8 +13,11 @@
     "tagline": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "descriptionMd": {
+      "type": "richtext"
+    },
+    "detailsTitle": {
+      "type": "string"
     },
     "highlights": {
       "type": "component",
@@ -28,6 +31,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "standardsTitle": {
+      "type": "string"
     },
     "checklist": {
       "type": "component",

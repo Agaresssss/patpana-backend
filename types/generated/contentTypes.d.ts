@@ -249,6 +249,7 @@ export interface AdminSession extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'admin::session'> &
       Schema.Attribute.Private;
+    metadata: Schema.Attribute.JSON & Schema.Attribute.Private;
     origin: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Private;
@@ -703,6 +704,14 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::article.article'
     >;
+    relatedArticlesTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'\u0E40\u0E19\u0E37\u0E49\u0E2D\u0E2B\u0E32\u0E17\u0E35\u0E48\u0E04\u0E25\u0E49\u0E32\u0E22\u0E01\u0E31\u0E19'>;
     seo: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -801,6 +810,58 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiContactUsFormSubmissionContactUsFormSubmission
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'contact_us_form_submissions';
+  info: {
+    description: 'Submissions from the Contact Us page form';
+    displayName: 'Contact Us Form Submission';
+    pluralName: 'contact-us-form-submissions';
+    singularName: 'contact-us-form-submission';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-us-form-submission.contact-us-form-submission'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 1;
+      }>;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 255;
+        minLength: 1;
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    tel: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 15;
+        minLength: 1;
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCookiePageCookiePage extends Struct.SingleTypeSchema {
   collectionName: 'cookie_pages';
   info: {
@@ -877,6 +938,12 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
         };
       }>;
     companyName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contactLabel: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1024,6 +1091,62 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiJoinUsFormSubmissionJoinUsFormSubmission
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'join_us_form_submissions';
+  info: {
+    description: 'Submissions from the Join Us page form';
+    displayName: 'Join Us Form Submission';
+    pluralName: 'join-us-form-submissions';
+    singularName: 'join-us-form-submission';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::join-us-form-submission.join-us-form-submission'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 1;
+      }>;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 255;
+        minLength: 1;
+      }>;
+    position: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 255;
+        minLength: 1;
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    tel: Schema.Attribute.String &
+      Schema.Attribute.Private &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 20;
+        minLength: 1;
       }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1689,7 +1812,7 @@ export interface PluginUsersPermissionsUser
 }
 
 declare module '@strapi/strapi' {
-  export module Public {
+  export namespace Public {
     export interface ContentTypeSchemas {
       'admin::api-token': AdminApiToken;
       'admin::api-token-permission': AdminApiTokenPermission;
@@ -1706,10 +1829,12 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::category.category': ApiCategoryCategory;
       'api::contact-page.contact-page': ApiContactPageContactPage;
+      'api::contact-us-form-submission.contact-us-form-submission': ApiContactUsFormSubmissionContactUsFormSubmission;
       'api::cookie-page.cookie-page': ApiCookiePageCookiePage;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::join-us-form-submission.join-us-form-submission': ApiJoinUsFormSubmissionJoinUsFormSubmission;
       'api::join-us-page.join-us-page': ApiJoinUsPageJoinUsPage;
       'api::not-found-page.not-found-page': ApiNotFoundPageNotFoundPage;
       'api::tag.tag': ApiTagTag;
