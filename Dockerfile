@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM node:22.23.4-alpine
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev bash git
 
 WORKDIR /opt/app
