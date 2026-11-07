@@ -98,6 +98,7 @@ export interface BlockExpertTeams extends Struct.ComponentSchema {
   };
   attributes: {
     design: Schema.Attribute.Component<'shared.design', false>;
+    qrCodes: Schema.Attribute.Component<'elements.qr-code', true>;
     sectionTitle: Schema.Attribute.String;
     subtitle: Schema.Attribute.Text;
     teams: Schema.Attribute.Component<'elements.expert-team', true>;
@@ -710,6 +711,18 @@ export interface ElementsJob extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsQrCode extends Struct.ComponentSchema {
+  collectionName: 'components_elements_qr_codes';
+  info: {
+    displayName: 'QR Code';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    qr_code: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsServiceCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_service_cards';
   info: {
@@ -973,6 +986,7 @@ declare module '@strapi/strapi' {
       'elements.hero-slide': ElementsHeroSlide;
       'elements.info-card': ElementsInfoCard;
       'elements.job': ElementsJob;
+      'elements.qr-code': ElementsQrCode;
       'elements.service-card': ElementsServiceCard;
       'elements.timeline-item': ElementsTimelineItem;
       'elements.value-item': ElementsValueItem;

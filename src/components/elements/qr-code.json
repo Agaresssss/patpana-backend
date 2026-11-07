@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_qr_codes",
+  "info": {
+    "displayName": "QR Code"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "qr_code": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}
