@@ -18,6 +18,7 @@ ENV PATH=/opt/app/node_modules/.bin:$PATH
 COPY . .
 
 ENV NODE_ENV=production
+ENV DATABASE_CLIENT=postgres
 RUN npm run build
 
 # ===== Production stage =====

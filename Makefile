@@ -1,6 +1,7 @@
-REGISTRY := registry.nipa.cloud/patpana-registry
+# REGISTRY := registry.nipa.cloud/patpana-registry
+REGISTRY := registry.container-platform.inet.co.th/cust-aek-harit
 IMAGE := patpana-backend
-VERSION := 0.1.3
+VERSION := 0.1.4
 
 .PHONY pre-build:
 pre-build:
