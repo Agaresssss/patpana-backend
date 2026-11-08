@@ -1,5 +1,10 @@
-import { factories } from '@strapi/strapi';
-
-export default factories.createCoreRouter('api::contact-us-form-submission.contact-us-form-submission', {
-  only: ['create'],
-});
+export default {
+  routes: [
+    {
+      method: 'POST',
+      path: '/contact-us-form-submissions',
+      handler: 'contact-us-form-submission.create',
+      config: { auth: false },
+    },
+  ],
+};
