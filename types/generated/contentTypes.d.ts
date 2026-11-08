@@ -432,6 +432,8 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     registrationToken: Schema.Attribute.String & Schema.Attribute.Private;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
+    resetPasswordTokenExpiresAt: Schema.Attribute.DateTime &
+      Schema.Attribute.Private;
     roles: Schema.Attribute.Relation<'manyToMany', 'admin::role'> &
       Schema.Attribute.Private;
     updatedAt: Schema.Attribute.DateTime;
@@ -673,13 +675,13 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
-    content: Schema.Attribute.RichText &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    content_block: Schema.Attribute.Blocks &
+    content: Schema.Attribute.Text &
+      Schema.Attribute.CustomField<
+        'plugin::tiptap-editor.RichText',
+        {
+          preset: 'article';
+        }
+      > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -809,58 +811,6 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
-      }>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiContactUsFormSubmissionContactUsFormSubmission
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'contact_us_form_submissions';
-  info: {
-    description: 'Submissions from the Contact Us page form';
-    displayName: 'Contact Us Form Submission';
-    pluralName: 'contact-us-form-submissions';
-    singularName: 'contact-us-form-submission';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    email: Schema.Attribute.Email &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::contact-us-form-submission.contact-us-form-submission'
-    > &
-      Schema.Attribute.Private;
-    message: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private &
-      Schema.Attribute.SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 255;
-        minLength: 1;
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    tel: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 15;
-        minLength: 1;
       }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1097,62 +1047,6 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
         i18n: {
           localized: true;
         };
-      }>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiJoinUsFormSubmissionJoinUsFormSubmission
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'join_us_form_submissions';
-  info: {
-    description: 'Submissions from the Join Us page form';
-    displayName: 'Join Us Form Submission';
-    pluralName: 'join-us-form-submissions';
-    singularName: 'join-us-form-submission';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    email: Schema.Attribute.Email & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::join-us-form-submission.join-us-form-submission'
-    > &
-      Schema.Attribute.Private;
-    message: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private &
-      Schema.Attribute.SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 255;
-        minLength: 1;
-      }>;
-    position: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Private &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 255;
-        minLength: 1;
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    tel: Schema.Attribute.String &
-      Schema.Attribute.Private &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 20;
-        minLength: 1;
       }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1835,12 +1729,10 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::category.category': ApiCategoryCategory;
       'api::contact-page.contact-page': ApiContactPageContactPage;
-      'api::contact-us-form-submission.contact-us-form-submission': ApiContactUsFormSubmissionContactUsFormSubmission;
       'api::cookie-page.cookie-page': ApiCookiePageCookiePage;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
       'api::home-page.home-page': ApiHomePageHomePage;
-      'api::join-us-form-submission.join-us-form-submission': ApiJoinUsFormSubmissionJoinUsFormSubmission;
       'api::join-us-page.join-us-page': ApiJoinUsPageJoinUsPage;
       'api::not-found-page.not-found-page': ApiNotFoundPageNotFoundPage;
       'api::tag.tag': ApiTagTag;

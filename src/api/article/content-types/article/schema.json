@@ -39,11 +39,15 @@
       }
     },
     "content": {
-      "type": "richtext",
+      "type": "customField",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
+      },
+      "customField": "plugin::tiptap-editor.RichText",
+      "options": {
+        "preset": "article"
       }
     },
     "category": {
@@ -94,14 +98,6 @@
       },
       "component": "shared.seo",
       "repeatable": false
-    },
-    "content_block": {
-      "type": "blocks",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     }
   }
 }
