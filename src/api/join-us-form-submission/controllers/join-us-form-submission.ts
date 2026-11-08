@@ -19,14 +19,9 @@ const getFilePath = (file: any): string => file.filepath || file.path;
 // extension -> mime type + magic bytes at file start
 const ALLOWED_FILES: Record<string, { mime: string; magic: number[] }> = {
   '.pdf': { mime: 'application/pdf', magic: [0x25, 0x50, 0x44, 0x46, 0x2d] }, // %PDF-
-  '.docx': {
-    mime: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    magic: [0x50, 0x4b, 0x03, 0x04], // zip container
-  },
-  '.doc': {
-    mime: 'application/msword',
-    magic: [0xd0, 0xcf, 0x11, 0xe0, 0xa1, 0xb1, 0x1a, 0xe1], // OLE2 container
-  },
+  '.jpg': { mime: 'image/jpeg', magic: [0xff, 0xd8, 0xff] },
+  '.jpeg': { mime: 'image/jpeg', magic: [0xff, 0xd8, 0xff] },
+  '.png': { mime: 'image/png', magic: [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a] },
 };
 
 const getExt = (file: any): string =>
@@ -82,7 +77,7 @@ export default ({ strapi }: { strapi: Core.Strapi }) => ({
         errors.push({
           path: 'file',
           code: 'file_type_invalid',
-          message: 'only .doc, .docx and .pdf files are allowed',
+          message: 'only .pdf, .jpg, .jpeg and .png files are allowed',
         });
       }
 
